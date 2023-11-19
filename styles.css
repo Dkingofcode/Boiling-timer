@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(62, 126, 230);
+}
+
+.formCard{
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 30em;
+    max-width: 40em;
+    margin: 1.5rem auto; 
+    padding: 1rem 1rem;
+}
+
+.formcontent{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#inputField{
+    outline: none;
+    border-bottom: 1px solid rgb(217, 215, 215);
+}
+
+#inputField:focus{
+    border-bottom: 1px solid black;
+}
+
+.inputform{
+    
+   font-size: 1.2rem;
+   outline: none;
+   outline-offset: 50px;
+}
+
+button{
+ padding: 0.5rem;
+ border-radius: 0.2rem;
+ font-size: 1rem;
+ font-weight: 600;
+}
+
+#timer{
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+
+
+.childtimer{
+   border: 1px solid gray;
+   background-color: rgb(228, 171, 122);
+   color: white;
+   border-radius: 50%; 
+   width: 3em;
+   height: 3em;
+   text-align: center;
+   padding-top: 0.6rem;
+   /* transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; */
+
+}
+
+@keyframes scaleAnimation {
+    0%{
+        transform: scale(1);
+    }
+
+    25%{
+        transform: scale(1.05);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    75%{
+        transform: scale(1.05);
+    }
+    100%{
+       transform: scale(1.0);
+    }
+   
+}
+
+.timer-scaling{
+    animation: scaleAnimation 0.9s ease-in-out infinite;
+}
+
+.timer-ended{
+   animation: fade-out 0.5s ease-in-out; 
+}
+
+@keyframes fade-out {
+   /*  Add styles for when the timer ends  */
+   0%{
+    opacity: 1;
+}
+
+50%{
+    opacity: 0.5;
+}
+
+100%{
+   opacity: 0;
+}
+
+}
